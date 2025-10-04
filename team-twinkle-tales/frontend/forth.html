@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="forth.css">
+    
+
+    <title>Twinkle Tales - مغامرة فضائية</title>
+</head>
+<body>
+    <div class="stars"></div>
+    
+
+
+    <div class="container">
+    
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">البطل المغامر</h5>
+                <br>
+                <div class="photos">
+                   <div class="photo center-content"> <img src="../assets/girl2.1.png" alt="photo 1"></div>
+                </div>
+        
+                <div class="buttons">
+                    <button class="next" id="nextBtn">يلا نبدأ مغامرتنا</button>
+                    <button class="back" id="backBtn">رجوع</button>
+                </div>
+                
+            </div>
+        </div>
+  </div>
+
+<script>
+    function selectOption(selected) {
+      // شيلي الاختيار من الباقي
+      document.querySelectorAll('.option').forEach(opt => {
+        opt.classList.remove('active');
+      });
+      // ضيفي البوردر على اللي اختارتيه
+      selected.classList.add('active');
+    }
+
+    
+</script>
+
+<script>
+  function selectOption(element) {
+    // يشيل الاختيار من أي مربع
+    document.querySelectorAll(".option").forEach(opt => {
+      opt.classList.remove("selected");
+    });
+
+    // يضيف الاختيار للمربع اللي دوست عليه
+    element.classList.add("selected");
+  }
+</script>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+  // زرار رجوع
+  const backBtn = document.getElementById("backBtn");
+  backBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    document.body.classList.add("fade-out-back"); // انيميشن للرجوع
+    setTimeout(() => {
+      window.location.href = "third.html"; 
+    }, 800);
+  });
+
+  // زرار التالي
+  const nextBtn = document.getElementById("nextBtn");
+  nextBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    document.body.classList.add("fade-out-next"); // انيميشن للانتقال
+    setTimeout(() => {
+      window.location.href = "../landingPage/landing.html"; 
+    }, 800);
+  });
+</script>
+
+</body>
+</html>

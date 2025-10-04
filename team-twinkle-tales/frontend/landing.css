@@ -1,0 +1,386 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Press+Start+2P&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  font-family: 'Cairo', sans-serif;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* كلمة Twinkle Tales */
+body::before {
+  content: "Twinkle Tales";
+  position: absolute;
+  top: 80px;
+  left: 80px;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 24px;
+  color: #FFFFFF;
+  margin-top: -20px;
+}
+
+/*سيكشن واحد */
+.section1{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to bottom, #4B45AD 15%, #490C89);
+    color: #FFFFFF;
+}
+
+
+.navbar{
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    font-family: 'Cairo', sans-serif;
+    color: #FFFFFF;
+
+}
+
+/* اللوجو */
+.logo {
+  position: absolute;
+  right: 80px; 
+}
+.logo img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%; 
+  object-fit: cover;
+  background: #fff;          
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;   
+}
+
+/* العناوين */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 40px; 
+  margin: 0;
+  padding: 0;
+  color: #FFFFFF;
+  margin-right: -200px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 600;
+  color: #FFFFFF;  
+  position: relative;
+}
+
+/* الخط تحت العنصر عند الهوفر */
+.nav-links li a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #fcfbfd; 
+  transition: width 0.3s;
+}
+
+.nav-links li a:hover::after {
+  width: 100%; 
+}
+
+.section1_content {
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+  gap: 250px; 
+  padding: 50px;
+}
+
+.section1_content .photo img {
+  width: 400px;  
+  height: 450px;
+}
+.photo{
+    margin-left: -250px;
+    
+}
+
+
+.section1_content .content {
+  color: #fff; 
+  max-width: 500px;
+  direction: rtl;
+  margin-right: -300px;
+}
+
+.section1_content .content h5 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.section1_content .content p {
+  font-size: 20px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+/* الزرار */
+.section1_content .content .btn {
+  width: 150px;
+  height: 50px;
+  border-radius: 12px;
+  color:    #490C89 ;
+  background: #FFFFFF;
+  font-size: 20px;
+  padding: 12px 24px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+   margin-top: 25px;
+   transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.section1_content .content .btn:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+.img {
+  transform: scaleX(-1);
+}
+
+
+
+/* ستارز */
+ 
+        .stars {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(2px 2px at 20% 30%, rgba(255, 255, 255, 0.8) 1px, transparent 50%),
+                radial-gradient(2px 2px at 40% 70%, rgba(255, 255, 255, 0.6) 1px, transparent 50%),
+                radial-gradient(1px 1px at 60% 20%, rgba(255, 255, 255, 0.9) 1px, transparent 50%),
+                radial-gradient(1px 1px at 80% 50%, rgba(255, 255, 255, 0.7) 1px, transparent 50%),
+                radial-gradient(2px 2px at 30% 80%, rgba(255, 255, 255, 0.5) 1px, transparent 50%);
+            background-size: 150px 100px;
+            animation: twinkle 4s ease-in-out infinite alternate;
+        }
+
+       
+
+.section2{
+    width: 100%;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.85);
+    background-image:url(c:/Users/ahmed/Downloads/5b7f2a5aa15d15ea5cf50617e5d1e3fd8555051f.jpg) ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: overlay;
+    box-shadow: 0px 8px 24px rgba(0,0,0,0.2);
+    
+}
+
+.section2_content{
+  direction: rtl;
+  font-size: 40px;
+  margin-right: 80px;
+}
+
+.section3{
+    width: 100%;
+    height: 90vh;
+    position: relative;
+    background: linear-gradient(to bottom  , #490C89 15% , #4B45AD);
+    overflow: hidden;
+}
+.section3_content{
+  direction: rtl;
+  font-size: 40px;
+  margin-right: 80px;
+  color: #fff;
+}
+
+.cards{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 60%;
+    margin-top: 30px;
+}
+
+.card{
+    width: 23%;
+    height: 85%;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.85);
+    background-image:url(c:/Users/ahmed/Downloads/5b7f2a5aa15d15ea5cf50617e5d1e3fd8555051f.jpg) ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: overlay;
+    box-shadow: 0px 8px 24px rgba(0,0,0,0.2);
+    padding: 40px;
+}
+
+.section3 .cards .card img{
+    width: 110%;
+    height: 110%;
+    object-fit: fill;
+}
+
+.section3 .cards .card h2{
+    color:#fff;
+    margin-top: 20px;
+    margin-left: 50px;
+}
+
+
+.section4_content {
+  display: flex;
+  align-items: center; /* يخليهم في النص عمودي */
+  justify-content: center;
+  gap: 250px; /* مسافة بين الصورة والكلام */
+  padding: 50px;
+}
+
+.section4_content .photo img {
+  width: 400px;  /* حجم الصورة */
+  height: 450px;
+}
+.photo{
+    margin-left: -250px;
+    
+}
+
+.section4{
+    width: 100%;
+    height: 80%;
+    background: rgba(255, 255, 255, 0.85);
+    background-image:url(c:/Users/ahmed/Downloads/5b7f2a5aa15d15ea5cf50617e5d1e3fd8555051f.jpg) ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: overlay;
+    box-shadow: 0px 8px 24px rgba(0,0,0,0.2);
+}
+
+.section4_content .content4 {
+  color:black; 
+  max-width: 500px;
+  direction: rtl;
+  margin-right: -300px;
+}
+
+.section4_content .content4 h5 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.section4_content .content4 p {
+  font-size: 20px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+/* الزرار */
+.section4_content .content4 .btn4 {
+  width: 150px;
+  height: 50px;
+  border-radius: 12px;
+  background: linear-gradient(90deg, #4B45AD 0%, #490C89 100%);
+  color: #FFFFFF;
+  font-size: 20px;
+  padding: 12px 24px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+   margin-top: 15px;
+}
+
+.section4_content .content4 .btn4:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+.img {
+  transform: scaleX(-1);
+}
+
+/*الفوتر*/
+.footer{
+    width: 100%;
+    height: 50vh;
+    position: relative;
+    background: linear-gradient(to bottom,  #490C89 15%,#4B45AD );
+
+}
+
+.footer_content{
+  direction: rtl;
+  font-size: 40px;
+  margin-right: 80px;
+  color: #fff;
+  position: relative;
+}
+
+
+.footer_content p {
+  position: relative; 
+  height: 40px;
+}
+
+.footer_content p::before{
+  content: "Twinkle Tales";
+  position: absolute;
+  top: -20px;
+  left: 80px;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 24px;
+  color: #FFFFFF;
+  margin-top: -20px;
+}
+
+.social {
+  display: flex;
+  gap: 25px;
+  margin-left: 10%;
+}
+
+.social a {
+  color: white;
+  font-size: 40px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social a:hover {
+  transform: scale(1.2);
+  color: #FFD700; /* لون دهبي عند الهوفر */
+}
+
+.footer_bottom{
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 18px;
+  color: #fff;
+  font-family: 'Cairo', sans-serif;
+  opacity: 0.9;
+}

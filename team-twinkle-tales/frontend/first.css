@@ -1,0 +1,158 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Press+Start+2P&display=swap');
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(to bottom, #4B45AD 15%, #490C89);
+  font-family: 'Cairo', sans-serif;
+  position: relative;
+  overflow: hidden;
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+
+body.fade-out {
+  opacity: 0;
+  transform: translateX(-50px); /* الصفحة تتحرك يمين/شمال مع التلاشي */
+}
+
+/* كلمة Twinkle Tales */
+body::before {
+  content: "Twinkle Tales";
+  position: absolute;
+  top: 80px;
+  left: 80px;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 24px;
+  color: #FFFFFF;
+}
+
+
+
+/* الكارد */
+.card {
+  width: 831px;
+  height: 476px;
+  position: absolute;
+  top: 148px;
+  left: 493px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.85);
+  background-image:url(c:/Users/ahmed/Downloads/5b7f2a5aa15d15ea5cf50617e5d1e3fd8555051f.jpg) ;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-blend-mode: overlay;
+  box-shadow: 0px 8px 24px rgba(0,0,0,0.2);
+  padding: 40px;
+}
+
+/* العنوان */
+.card-title {
+  font-family: 'Cairo', sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+  color: #0B0B0B;
+  text-align: center;
+}
+
+/* الفورم */
+.login-form label {
+  font-weight: 600;
+  font-size: 26px;
+  color: #000000;
+}
+
+.select-wrapper {
+  display: inline-block;
+  border-radius: 16px;
+  padding: 2px; /* سمك البوردر */
+  background: conic-gradient(from 90deg at 50% 50%, #3A3DA7 0deg, #490C89 360deg);
+}
+
+.select-wrapper select {
+  width: 703px;
+  height: 66px;
+  border: none;
+  border-radius: 14px; /* أصغر من الأب بشوية */
+  padding: 10px 16px;
+  background: #FFFFFF;
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.8);
+  outline: none;
+  color: rgba(0,0,0,0.4);
+}
+
+
+
+/* الزرار */
+.login-form .btn {
+  width: 703px;
+  height: 66px;
+  border-radius: 16px;
+  background: linear-gradient(90deg, #4B45AD 0%, #490C89 100%);
+  color: #FFFFFF;
+  font-size: 28px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+   margin-top: 70px;
+   transition: transform 0.3s;
+}
+
+.login-form .btn:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+/* شخصيات */
+.astronaut-area {
+  top: 150px;
+  left: 75px;
+  width: 500px;
+  height: 500px;
+  background: url('../assets/astro1.png') no-repeat center/contain;
+  opacity: 1;
+   position: absolute;
+
+}
+.astronaut-area::after {
+  content: "";
+  position: absolute;
+  top: -170px;
+  left: 900px;
+  transform: translateX(50%);
+  width: 292px;
+  height: 292px;
+  background: url('../assets/astro2.png') no-repeat center/contain;
+}
+
+
+
+/* ستارز */
+ 
+        .stars {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(2px 2px at 20% 30%, rgba(255, 255, 255, 0.8) 1px, transparent 50%),
+                radial-gradient(2px 2px at 40% 70%, rgba(255, 255, 255, 0.6) 1px, transparent 50%),
+                radial-gradient(1px 1px at 60% 20%, rgba(255, 255, 255, 0.9) 1px, transparent 50%),
+                radial-gradient(1px 1px at 80% 50%, rgba(255, 255, 255, 0.7) 1px, transparent 50%),
+                radial-gradient(2px 2px at 30% 80%, rgba(255, 255, 255, 0.5) 1px, transparent 50%);
+            background-size: 150px 100px;
+            animation: twinkle 4s ease-in-out infinite alternate;
+        }
+
